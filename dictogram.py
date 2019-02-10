@@ -38,11 +38,14 @@ class Dictogram(dict):
 
 
 def print_histogram(word_list):
-    print('word list: {}'.format(word_list))
+    output = f'Word list: {word_list}'
+    print(output)
     # Create a dictogram and display its contents
     histogram = Dictogram(word_list)
-    print('dictogram: {}'.format(histogram))
-    print('{} tokens, {} types'.format(histogram.tokens, histogram.types))
+    histogram_output = f'Dictogram: {histogram}'
+    print(histogram_output)
+    tokens_and_types = f'{histogram.tokens} tokens, {histogram.types} types'
+    print(tokens_and_types)
     for word in word_list[-2:]:
         freq = histogram.frequency(word)
         print('{!r} occurs {} times'.format(word, freq))
