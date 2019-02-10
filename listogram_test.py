@@ -88,6 +88,5 @@ class ListogramTest(unittest.TestCase):
             histogram.add_count(word)
         assert histogram.types == 5
 
-
 if __name__ == '__main__':
     unittest.main()

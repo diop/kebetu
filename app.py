@@ -1,3 +1,9 @@
+import cleanup
+import tokenize 
+import word_count
+import sample
+import sentence
+
 from flask import Flask
 app = Flask(__name__)
 
