@@ -28,7 +28,3 @@ def random_african_proverb():
     return proverbs[rand_index]
 #def hello_world():
     #return 'Only a fool tests the depth of a river with both feet'
-
-if __name__ == '__main__':
-    proverb = random_african_proverb()
-    print(proverb)
