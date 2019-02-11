@@ -1,4 +1,5 @@
 #!python
+# Code attribution: https://github.com/Austrie/Tweet-Generator/blob/master/source/listogram.py
 
 from __future__ import division, print_function  # Python 2 and 3 compatibility
 
