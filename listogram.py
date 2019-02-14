@@ -24,6 +24,9 @@ class Listogram(list):
         word = str(word)
         word_in_list = False
         self.tokens += count
+
+        # for item in self:
+            
         for index in range (0, len(self)):
             if self[index][0] == word:
                 self[index][1] += count
