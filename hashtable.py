@@ -104,8 +104,8 @@ class HashTable(object):
         # Otherwise, insert given key-value entry into bucket
         index = self._bucket_index(key)
         bucket = self.buckets[index]
-        entry = bucket.find(lambda key_value: key_value == 0)
-        if enry is not None:
+        entry = bucket.find(lambda key_value: key_value[0] == key)
+        if entry is not None:
             bucket.delete(entry)
         entry = (key, value)
         bucket.append(entry)
