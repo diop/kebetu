@@ -1,5 +1,5 @@
 ## African Proverbs Tweet Generator
-Make School CS-1.2
+Make School CS 1.2: How Data Structures Work
 
 ## Project Sprints
 * Project goals:
