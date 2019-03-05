@@ -57,12 +57,14 @@ class LinkedList(object):
         """Return the length of this linked list by traversing its nodes.
         Best and worst running time: O(n) for n nodes in the list
         because we have to iterate over all n nodes and count 1 for each"""
-        # TODO: Loop through all nodes and count one for each
+        # Loop through all nodes and count one for each
         count = 0
-        node = self.head
-        while node  is not None:
-            count += 1
-            node = node.next
+        # node = self.head
+        # while node  is not None:
+        #     count += 1
+        #     node = node.next
+        for bucket in self.buckets: #0(n)
+            count += bucket.length() # 0(l)
         return count
 
     def append(self, item):

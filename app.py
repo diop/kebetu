@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return 'Only a fool tests the depth of a river with both feet. - African Proverb'
+    return 'Only a fool tests the depth of a river with both feet.'
 
 if __name__ == '__main__':
     app.run()

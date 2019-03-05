@@ -118,8 +118,7 @@ class HashTable(object):
         # If found, delete entry associated with given key
         # Otherwise, raise error to tell user delete failed
         # Hint: raise KeyError('Key not found: {}'.format(key))
-        index = self._bucket_index(key)
-        bucket = self.buckets[index]
+        bucket = self.buckets[self._bucket_index(key)]
         item = bucket.find(lambda key_value: key_value[0] == key)
         if item is not None:
             bucket.delete(item)
