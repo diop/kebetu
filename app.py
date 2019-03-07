@@ -1,15 +1,33 @@
-# import cleanup
-# import tokenize 
-# import word_count
-# import sample
-# import sentence
+import os
+import sys
+
+import cleanup
+import tokenized
+import word_count
+import sample
+from sentence import markov_dictograms, markov_chain 
 
 from flask import Flask
-app = Flask(__name__)
+from flask import render_template 
+
+app = Flask(__name__, template_folder='templates', static_folder='static')
+
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+with open(ROOT_DIR + '/corpus.txt', 'r') as f:
+    corpus = f.read().replace('\n', ' ')
 
 @app.route('/')
 def main():
-    return 'Only a fool tests the depth of a river with both feet.'
+    proverbs_dict = markov_dictograms(corpus)
+    sentence = markov_chain(proverbs_dict)
+    return render_template('index.html', sentence=sentence)
+
+# @app.route('/tweet', method=['POST'])
+# def tweet():
+#     status = request.form['quote']
+#     twitter.tweet(status)
+#     return redirect('/')
 
 if __name__ == '__main__':
     app.run()

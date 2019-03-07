@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Believable African Proverbs Tweet Generator v0.0.1</title>
+    </head>
+    <body>
+        <div>
+            <blockquote>{{ sentence }}</blockquote>
+            <form action="/tweet" method="post">
+                <input type="hidden" name="sentence" value="{{ sentence }}">
+                <button type="submit">Tweet this</button>
+            </form>
+        </div>
+    </body>
+</html>
