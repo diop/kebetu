@@ -33,7 +33,12 @@ def markov_chain(dictogram_dictionary):
     return ' '.join(sentence_array)
 
 if __name__ == '__main__':
-    fish_text = 'one fish two fish red fish blue fish'
+    # fish_text = 'one fish two fish red fish blue fish'
 
-    fish_markov_dictionary = markov_dictograms(fish_text)
-    print(markov_chain(fish_markov_dictionary))
+    # fish_markov_dictionary = markov_dictograms(fish_text)
+    # print(markov_chain(fish_markov_dictionary))
+
+    with open('corpus.txt', 'r') as f:
+        corpus = f.read().replace('\n', '')
+    proverb_dict = markov_dictograms(corpus)
+    print(markov_chain(proverb_dict))
