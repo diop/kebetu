@@ -1,7 +1,7 @@
+![African Proverbs](screenshot.png)
+
 ## `Believable African Proverbs Tweet Generator`
 Make School CS 1.2: How Data Structures Work
-
-![African Proverbs](screenshot.png)
 
 ## `Live Web App`
 [https://african-proverbs.herokuapp.com/](https://african-proverbs.herokuapp.com/)
