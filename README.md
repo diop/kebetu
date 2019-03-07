@@ -1,9 +1,15 @@
-## African Proverbs Tweet Generator
+## `Believable African Proverbs Tweet Generator`
 Make School CS 1.2: How Data Structures Work
 
 ![African Proverbs](screenshot.png)
 
-## Project Sprints
+## `Live Web App`
+[https://african-proverbs.herokuapp.com/](https://african-proverbs.herokuapp.com/)
+
+## `Twitter`
+The tweet button is live but disabled because the app is tied to my personal account. Proof of tweet: [https://twitter.com/diopfode/status/1103562311330017280](https://twitter.com/diopfode/status/1103562311330017280)
+
+## `Project Sprints`
 * Project goals:
     + [ ] Use a Python script to randomly generate words from a dictionary.
     + [ ] Build sentences by sampling these words using a Markov language model.
