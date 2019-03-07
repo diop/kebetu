@@ -1,6 +1,8 @@
 ## African Proverbs Tweet Generator
 Make School CS 1.2: How Data Structures Work
 
+![African Proverbs](screenshot.png)
+
 ## Project Sprints
 * Project goals:
     + [ ] Use a Python script to randomly generate words from a dictionary.
