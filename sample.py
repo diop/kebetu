@@ -36,6 +36,5 @@ def frequency_test(hist, word_list):
 
         print(frequency_list)
 
-
-frequency_test(hist, word_list)
+# frequency_test(hist, word_list)
 weighted_random_selection(hist)
