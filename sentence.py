@@ -32,6 +32,36 @@ def markov_chain(dictogram_dictionary):
 
     return ' '.join(sentence_array)
 
+def nth_order_markov(text, order):
+    arr = text.split()
+    dico = {}
+
+    for word_index in range(len(arr) - order):
+        current_tuple = tuple((arr[index]) for index in range(word_index, word_index + order))
+        next_word = arr[word_index + order]
+
+        if current_tuple in dico:
+            dico[current_tuple].add_count(next_word)
+        else:
+            dico[current_tuple] = Dictogram([next_word])
+    return dico
+
+def nth_markov_chain(dico):
+    dico_keys = [key for key, value in dico.items()]
+    sentence_arr = list(dico[randint(9, len(dico) - 1)])
+
+    order = len(sentence_arr)
+
+    for word_index in range(10):
+        tuple_key = tuple((sentence_arr[indec]) for index in range(word_index + order))
+        if tuple_key in dico:
+            dicto_word = dico[tuple_key]
+            net_word = markov_sample(dico_word)
+            sentence_arr.append(next_word)
+        else:
+            break
+    return ' '.join(setence_arr)
+
 if __name__ == '__main__':
     # fish_text = 'one fish two fish red fish blue fish'
 
@@ -40,5 +70,7 @@ if __name__ == '__main__':
 
     with open('corpus.txt', 'r') as f:
         corpus = f.read().replace('\n', ' ')
-    proverb_dict = markov_dictograms(corpus)
-    print(markov_chain(proverb_dict))
+    # proverb_dict = markov_dictograms(corpus)
+    # print(markov_chain(proverb_dict))
+    proverb_dict = nth_markov_order(corpus, 2)
+    print(nth_markov_chain(proverb_dict))
