@@ -2,17 +2,20 @@
     <head>
         <title>Believable African Proverbs Tweet Generator v0.0.1</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
     </head>
     <body>
-        <div class="container">
-            <h6>Generated Proverb:</h6>
-            <blockquote>{{ sentence }}</blockquote>
-            <form action="/" method="get">
-                <input type="hidden" name="sentence" value="{{ sentence }}">
-                <button type="submit">Tweet this!</button>
-                <button type="submit" onclick="generateNewProverb()">Generate!</button>
-            </form>
-        </div>
+        <header class="masthead">
+            <div class="container">
+                <h6>Generated Proverb:</h6>
+                <blockquote>{{ sentence }}</blockquote>
+                <form action="/" method="get">
+                    <input type="hidden" name="sentence" value="{{ sentence }}">
+                    <button type="submit">Tweet this!</button>
+                    <button type="submit" onclick="generateNewProverb()">Generate!</button>
+                </form>
+            </div>
+        </header>
     <script>
         function generateNewProverb() {
            location.reload()
