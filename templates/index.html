@@ -7,10 +7,16 @@
         <div class="container">
             <h6>Generated Proverb:</h6>
             <blockquote>{{ sentence }}</blockquote>
-            <form action="/tweet" method="post">
+            <form action="/" method="get">
                 <input type="hidden" name="sentence" value="{{ sentence }}">
-                <button type="submit">Tweet this</button>
+                <button type="submit">Tweet this!</button>
+                <button type="submit" onclick="generateNewProverb()">Generate!</button>
             </form>
         </div>
+    <script>
+        function generateNewProverb() {
+           location.reload()
+        }
+    </script>
     </body>
 </html>
