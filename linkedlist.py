@@ -12,7 +12,6 @@ class Node(object):
         """Return a string representation of this node."""
         return 'Node({!r})'.format(self.data)
 
-
 class LinkedList(object):
 
     def __init__(self, items=None):
@@ -59,12 +58,10 @@ class LinkedList(object):
         because we have to iterate over all n nodes and count 1 for each"""
         # Loop through all nodes and count one for each
         count = 0
-        # node = self.head
-        # while node  is not None:
-        #     count += 1
-        #     node = node.next
-        for bucket in self.buckets: #0(n)
-            count += bucket.length() # 0(l)
+        node = self.head
+        while node  is not None:
+            count += 1
+            node = node.next
         return count
 
     def append(self, item):
@@ -87,14 +84,12 @@ class LinkedList(object):
         # TODO: Create new node to hold given item
         # TODO: Prepend node before head, if it exists
         node = Node(item)
-        if self.size == 0:
+        if self.head == 0:
             self.head = node
             self.tail = node
-            self.size += 1
         else:
             node.next = self.head
             self.head = node
-            self.size += 1
 
     def find(self, quality):
         """Return an item from this linked list satisfying the given quality.
