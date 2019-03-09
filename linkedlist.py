@@ -81,15 +81,16 @@ class LinkedList(object):
         """Insert the given item at the head of this linked list.
         Best and worth case running time: O(1) because we only change
         the first node and never loop through all nodes"""
-        # TODO: Create new node to hold given item
-        # TODO: Prepend node before head, if it exists
+        # Create new node to hold given item
+        # Prepend node before head, if it exists
         node = Node(item)
-        if self.head == 0:
+        if self.head is None:
             self.head = node
             self.tail = node
         else:
             node.next = self.head
             self.head = node
+        self.size += 1
 
     def find(self, quality):
         """Return an item from this linked list satisfying the given quality.
