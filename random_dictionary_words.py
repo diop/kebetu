@@ -8,7 +8,7 @@ def get_dictionary_words():
 
 def create_random_sentence(dictionary, num_words):
     for _ in range(num_words):
-        random_sentence = ' '.join(random.sample(dictionary, 10)) + '.'
+        random_sentence = ' '.join(random.sample(dictionary, num_words)) + '.'
         return random_sentence
 
 def main():
