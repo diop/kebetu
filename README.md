@@ -1,11 +1,8 @@
-### `Believable African Proverbs Tweet Generator`
+### `Believable African Proverbs Generator`
 Make School CS 1.2: How Data Structures Work - Winter 2019
 
 ### `Live Web App`
-[https://african-proverbs.herokuapp.com/](https://african-proverbs.herokuapp.com/)
-
-### `Twitter`
-The tweet button is live but disabled because the app is tied to my personal account. Proof of tweet: [https://twitter.com/diopfode/status/1103562311330017280](https://twitter.com/diopfode/status/1103562311330017280)
+[https://proverbs-generator.herokuapp.com/](https://proverbs-generator.herokuapp.com/)
 
 ### `Project Sprints`
 * Project goals:
