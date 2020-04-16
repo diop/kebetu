@@ -23,11 +23,5 @@ def main():
     sentence = markov_chain(proverbs_dict)
     return render_template('index.html', sentence=sentence)
 
-# @app.route('/tweet', method=['POST'])
-# def tweet():
-#     status = request.form['quote']
-#     twitter.tweet(status)
-#     return redirect('/')
-
 if __name__ == '__main__':
     app.run()
